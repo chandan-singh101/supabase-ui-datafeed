@@ -5,9 +5,9 @@ const { Pool } = require("pg");
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Use environment variable for DB password
+// Use Supabase Session Pooler (IPv4) connection string
 const pool = new Pool({
-  connectionString: "postgresql://postgres:Chandan1@singh@db.ykqrfpbkxnnohffjdbdt.supabase.co:5432/postgres",
+  connectionString: "postgresql://postgres.ykqrfpbkxnnohffjdbdt:Chandan1@singh@aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres",
   ssl: {
     rejectUnauthorized: false,
   },
